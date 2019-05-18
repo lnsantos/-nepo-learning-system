@@ -20,7 +20,6 @@ app.set('views', './app/views');
 // realizar todos os require da aplicationWeb
 // passando por parâmetro no app
 consign().include('app/rotas').into(app);
-
 module.exports = app;
    
    
