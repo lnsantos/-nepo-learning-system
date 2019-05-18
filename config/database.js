@@ -1,5 +1,11 @@
 const sql = require('mysql');
 
-var conexao = sql.createConnection({host : 'localhost', user : 'root', password : '', database : 'escola_database'});
+// connSql : Recebe um método e passa para o retorno do exports, assim evitamos que para cada att se crie uma conexao com o database
+var connSql = ()=>{
+    console.log('Conexão estabelecida'); 
+    return sql.createConnection({host : 'localhost', user : 'root', password : '', database : 'escola_database'});
+}
 
-module.exports = ()=>{ console.log('Conexão estabelecida'); return conexao;};
+module.exports = ()=>{ 
+    return connSql;
+};

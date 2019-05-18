@@ -19,7 +19,13 @@ app.set('views', './app/views');
 
 // realizar todos os require da aplicationWeb
 // passando por parâmetro no app
-consign().include('app/rotas').into(app);
+consign()
+    .include('app/rotas')
+    // Incluindo o databaseConnection 
+    .then('config/database.js')
+    .into(app);
+
+
 module.exports = app;
    
    
