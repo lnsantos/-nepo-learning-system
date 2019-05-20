@@ -1,5 +1,7 @@
 var express = require('express');
 const consign = require('consign');
+var bp = require('body-parser');
+
 var app = express();
 
 // Seta onde vai busca os arquivos
@@ -16,6 +18,10 @@ app.set('views', './app/views');
     req.statusCode(404).render("Pagina não encontrada")
 });
 */
+
+// Implementando o Body-parse
+// Configurando a nossa URL! permitindo que o JSON trate a URL ?
+app.use(bp.urlencoded({extended: true}))
 
 // realizar todos os require da aplicationWeb
 // passando por parâmetro no app
