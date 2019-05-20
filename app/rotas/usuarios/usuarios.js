@@ -7,12 +7,12 @@ module.exports =(app)=>{
         var usuariosModel = app.app.models.usuariosMD;
    
         usuariosModel.getUsuarios(conexao, (err, resultado)=>{
-            res.render("./administrador/usuarios/usuarios", {usuarios : resultado, opc : 'usuarios'});
+            res.render("./administrador/usuario/usuarios", {usuarios : resultado, opc : 'usuarios'});
         });
         
 
         usuariosModel.getBuscaUsuario(conexao, (err, resultado,codigoBuscaUsuario )=>{
-            res.render("./administrador/usuarios/usuarios", {usuario : resultado, opc : 'usuario', codigo : codigoBuscaUsuario});
+            res.render("./administrador/usuario/usuarios", {usuario : resultado, opc : 'usuario', codigo : codigoBuscaUsuario});
         });
 
     });
