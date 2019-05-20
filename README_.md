@@ -21,4 +21,8 @@ Esse sistema é fruto do resultado das coisas que vou aprendendo no NodeJS, pret
     <td><strong>consign</strong></td>
     <td>npm install consign --save</td>
   </tr>
+  <tr>
+    <td><strong>body parser</strong></td>
+    <td>npm install body-parser --save</td>
+  </tr>
 </table>
