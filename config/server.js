@@ -23,6 +23,8 @@ consign()
     .include('app/rotas')
     // Incluindo o databaseConnection 
     .then('config/database.js')
+    // Inclindo os model
+    .then('app/models')
     .into(app);
 
 
