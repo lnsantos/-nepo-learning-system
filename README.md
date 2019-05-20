@@ -26,3 +26,15 @@ Esse sistema é fruto do resultado das coisas que vou aprendendo no NodeJS, pret
     <td>npm install body-parser --save</td>
   </tr>
 </table>
+
+<table>
+  <tr>
+      <th>body parser</th>
+  </tr>
+  <tr>
+      <td><h6>
+      Pelo oque eu entendi, ele é responsavel por recebe a informação da URL.
+      Oque ele faz com essa informação ? Simplesmente transforma em um JSON. Gostaria de deixa bem claro que foi tudo em minhas simples OBSERVAÇÕES.
+      </h6></td>
+  </tr>
+</table>

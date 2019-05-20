@@ -21,6 +21,7 @@ app.set('views', './app/views');
 
 // Implementando o Body-parse
 // Configurando a nossa URL! permitindo que o JSON trate a URL ?
+// Ele recebe a URL e transforma em um JSON, Minhas observações me leveram a isso
 app.use(bp.urlencoded({extended: true}))
 
 // realizar todos os require da aplicationWeb
