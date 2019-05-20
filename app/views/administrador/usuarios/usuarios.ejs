@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>username</th>
+            <th>password</th>
+            <th>actions</th>
+        </tr>
+        <% for(var indice = 0; indice < usuarios.length; indice++){ %>
+        <tr>
+            <td><%= usuarios[indice].usuario %> </td>
+            <td><%= usuarios[indice].pass %> </td>
+            <td>
+                <button value="">DEL</button>
+                <button value="">EDIT</button>
+                <button value="">BAN</button>
+                <button value="">DES</button>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+</body>
+</html>
