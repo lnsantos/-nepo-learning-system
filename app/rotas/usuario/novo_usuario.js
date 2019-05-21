@@ -9,9 +9,7 @@ module.exports =(app)=>{
         var data = req.body;
 
         usuarioMD.novoUsuario(conexao,data, (err, result)=>{
-            (usuarioMD.novoUsuario(conexao, (err, result)=>{
-                res.render("./administrador/usuario/usuarios", {usuarios : result});
-            }));  
+            res.redirect('/usuarios'); 
         });
     });
 }

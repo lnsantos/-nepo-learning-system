@@ -13,9 +13,8 @@ module.exports = ()=>{
         var username = data.username;
         var password = data.password;
 
-        conexao.query('INSERT INTO usuarios(usuario,pass) values ('+
-        username+'),('+password+');', callback);
-        console.log(username +' Inserido com sucesso!');
+        conexao.query('INSERT INTO usuarios(usuario,pass) values ("'+username+'","'+password+'");', callback);
+        
     }
     return this;
 }
