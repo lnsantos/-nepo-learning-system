@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+        <%var err; if(err){ %>
+            <ul>
+                <% for(var index=0;index < err.length; index++){ %>
+                <li> <%= err[index].msg %> </li>
+                <% } %>
+            </ul>
+        <%}%>   
     <form action="/novo_usuario/salvar" method="POST">
         <label for="usuario">Usuario</label>
         <input type="text" name="usuario" id="usuarioUsername"/>
@@ -14,7 +21,7 @@
         <label for="pass">Password</label>
         <input type="password" name="pass" id="usuarioSenha"/>
         <br>
-        <label for="email">Password</label>
+        <label for="email">E-mail</label>
         <input type="email" name="email" id="usuarioEmail"/>
         <input type="submit" value="Salvar">
     </form>
