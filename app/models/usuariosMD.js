@@ -13,9 +13,7 @@ Usuario.prototype.getBuscaUsuario = (conexao, callback, codigo)=>{
 Usuario.prototype.novoUsuario = (conexao, data , callback)=>{
     var username = data.username;
     var password = data.password;
-
-    conexao.query('INSERT INTO usuarios(usuario,pass) values ("'+username+'","'+password+'");', callback);
-    
+    conexao.query('INSERT INTO usuarios SET ?',data, callback); 
 }
 module.exports = ()=>{
     return Usuario;
