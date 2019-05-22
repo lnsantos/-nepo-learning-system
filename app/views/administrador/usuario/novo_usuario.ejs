@@ -7,22 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-        <%var err; if(err){ %>
+        <% if(err){ %>
             <ul>
                 <% for(var index=0;index < err.length; index++){ %>
                 <li> <%= err[index].msg %> </li>
                 <% } %>
             </ul>
-        <%}%>   
+        <% }%>   
     <form action="/novo_usuario/salvar" method="POST">
         <label for="usuario">Usuario</label>
-        <input type="text" name="usuario" id="usuarioUsername"/>
+        <input type="text" name="usuario" valeu="<%= infor.usuario %>" id="usuarioUsername"/>
         <br>
         <label for="pass">Password</label>
-        <input type="password" name="pass" id="usuarioSenha"/>
+        <input type="password" name="pass" valeu="<%= infor.pass %>" id="usuarioSenha"/>
         <br>
         <label for="email">E-mail</label>
-        <input type="email" name="email" id="usuarioEmail"/>
+        <input type="email" name="email" valeu="<%= infor.email %>" id="usuarioEmail"/>
         <input type="submit" value="Salvar">
     </form>
 </body>

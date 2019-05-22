@@ -33,6 +33,7 @@ consign()
     .then('config/database.js')
     // Inclindo os model
     .then('app/models')
+    .then('app/controllers')
     .into(app);
 
 module.exports = app;
