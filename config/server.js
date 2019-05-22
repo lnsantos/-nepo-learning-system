@@ -1,7 +1,7 @@
 var express = require('express');
 const consign = require('consign');
 var bp = require('body-parser');
-
+var expressValidator = require('express-validator');
 var app = express();
 
 // Seta onde vai busca os arquivos
@@ -23,6 +23,7 @@ app.set('views', './app/views');
 // Configurando a nossa URL! permitindo que o JSON trate a URL ?
 // Ele recebe a URL e transforma em um JSON, Minhas observações me leveram a isso
 app.use(bp.urlencoded({extended: true}))
+app.use(expressValidator());
 
 // realizar todos os require da aplicationWeb
 // passando por parâmetro no app

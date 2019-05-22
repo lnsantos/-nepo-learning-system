@@ -10,7 +10,6 @@ module.exports =(app)=>{
             res.render("./administrador/usuario/usuarios", {usuarios : resultado, opc : 'usuarios'});
         });
         
-
         usuariosModel.getBuscaUsuario(conexao,(err, resultado,codigoBuscaUsuario )=>{
             res.render("./administrador/usuario/usuarios", {usuario : resultado, opc : 'usuario', codigo : codigoBuscaUsuario});
         });
