@@ -5,7 +5,7 @@ module.exports =(app)=>{
     app.post('/novo_usuario/salvar',(req, res)=>{
         var conexao = app.config.database;
         // Navegando no diretório
-        var usuarioMD = app.app.models.usuariosMD;
+        var usuarioMD = new app.app.models.usuariosMD;
         var data = req.body;
 
         usuarioMD.novoUsuario(conexao,data, (err, result)=>{
