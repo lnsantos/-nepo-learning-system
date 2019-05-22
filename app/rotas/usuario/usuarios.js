@@ -6,12 +6,12 @@ module.exports =(app)=>{
         // Navegando no diretório
         var usuariosModel = new app.app.models.usuariosMD;
    
-        usuariosModel.getUsuarios(conexao, (err, resultado)=>{
+        usuariosModel.getUsuarios( conexao,(err, resultado)=>{
             res.render("./administrador/usuario/usuarios", {usuarios : resultado, opc : 'usuarios'});
         });
         
 
-        usuariosModel.getBuscaUsuario(conexao, (err, resultado,codigoBuscaUsuario )=>{
+        usuariosModel.getBuscaUsuario(conexao,(err, resultado,codigoBuscaUsuario )=>{
             res.render("./administrador/usuario/usuarios", {usuario : resultado, opc : 'usuario', codigo : codigoBuscaUsuario});
         });
 
